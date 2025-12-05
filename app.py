@@ -9,7 +9,11 @@ def hello():
 
 @app.route("/time")
 def get_time():
-    return {"current_time": datetime.now().strftime("%Y-%m-%d %H:%M:%S")}
+    now = datetime.now()
+    return {
+        "current_time": now.strftime("%Y-%m-%d %H:%M:%S"),
+        "timezone": "Europe/Budapest"
+    }
 
 if __name__ == "__main__":
     app.run(host="0.0.0.0", port=8080)

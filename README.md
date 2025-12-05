@@ -9,3 +9,9 @@ python -m venv venv
 venv\Scripts\activate
 pip install -r requirements.txt
 python app.py
+
+## Docker build és futtatás
+
+```bash
+docker build -t hello-devops:v1 .
+docker run -p 8080:8080 hello-devops:v1

@@ -1,0 +1,20 @@
+{
+    "name": "hello-devops-devcontainer",
+    "build": {
+        "dockerfile": "Dockerfile",
+        "context": ".."
+    },
+    "forwardPorts": [8080],
+    "customizations": {
+        "vscode": {
+            "extensions": [
+                "ms-python.python",
+                "ms-python.vscode-pylance"
+            ]
+        }
+    },
+    "remoteUser": "root",
+    "runArgs": ["--init"],
+
+    "postStartCommand": "python app.py"
+}
